@@ -18,8 +18,8 @@ function TaskShow(props){
 
     return(
         <div>
-            <input onClick={() => {handleComplete(props.index)}} type={'checkbox'} checked={!props.item.status}/>
-            {/* <button onClick={() => {handleComplete(props.index)}}>{props.item.status? 'completed':'uncompleted'}</button> */}
+            {/* <input onClick={() => {handleComplete(props.index)}} type={'checkbox'} checked={!props.item.status}/> */}
+            <button onClick={() => {handleComplete(props.index)}}>{props.item.status? 'completed':'uncompleted'}</button>
             {props.item.status? props.item.text: <strike> {props.item.text} </strike>}
             <button onClick={() => handleEdit(props.index)}>Edit</button>
             <button onClick={() => handleDelete(props.index)}>Delete</button>
